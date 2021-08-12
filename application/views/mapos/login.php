@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/matrix-login.css" />
     <link href="<?= base_url(); ?>assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/myStylesEG.css">
     <script src="<?= base_url() ?>assets/js/jquery-1.12.4.min.js"></script>
 </head>
 
-<body>
+<body class="bodyLoginEG">
 <div id="loginbox">
         <form class="form-vertical" id="formLogin" method="post" action="<?= site_url('login/verificarLogin') ?>">
             <?php if ($this->session->flashdata('error') != null) { ?>
@@ -22,19 +23,19 @@
                 </div>
             <?php } ?>
             <div class="control-group normal_text">
-                <h3><img src="<?= base_url() ?>assets/img/logo.png" alt="Logo" /></h3>
+                <h3><img src="<?= base_url() ?>assets/img/logoEG.png" alt="Logo" /></h3>
             </div>
             <div class="control-group">
                 <div class="controls">
                     <div class="main_input_box">
-                        <span class="add-on bg_lg"><i class="fas fa-user"></i></span><input id="email" name="email" type="text" placeholder="Email" />
+                        <span class="add-on bg_lg"><i class="fas fa-user"></i></span><input id="email" name="email" type="text" placeholder="Ingrese su Email" />
                     </div>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
                     <div class="main_input_box">
-                        <span class="add-on bg_lb"><i class="fas fa-lock"></i></span><input name="senha" type="password" placeholder="Senha" />
+                        <span class="add-on bg_lb"><i class="fas fa-lock"></i></span><input name="senha" type="password" placeholder="Ingrese su contrasena" />
                     </div>
                 </div>
             </div>
@@ -42,17 +43,23 @@
                 <div id="progress-acessar" class='hide progress progress-info progress-striped active'>
                     <div class='bar' style='width: 100%'></div>
                 </div>
-                <button id="btn-acessar" class="btn btn-success btn-large" /> Acessar</button>
-            </div>
-        </form>
+                <button id="btn-acessar" class="btn btn-success btn-large" /> Ingresar</button>
 
+            <!--FOOTER COPYRIGHT EG START -->
+                <p class="copyrightEGLogin" >Todos los derechos reservados &copy; 2021 - by <a href="https://instagram.com/electronicagambino">Electronica Gambino</a></p>
+            <!--FOOTER COPYRIGHT EG END -->
+
+            </div>
+
+        </form>
+ 
     </div>
 
     <a href="#notification" id="call-modal" role="button" class="btn" data-toggle="modal" style="display: none ">notification</a>
     <div id="notification" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 id="myModalLabel">MapOS</h4>
+            <h4 id="myModalLabel">SIGOS 2021</h4>
         </div>
         <div class="modal-body">
             <h5 style="text-align: center" id="message">Os dados de acesso estão incorretos, por favor tente novamente!</h5>
@@ -128,6 +135,7 @@
 
         });
     </script>
+
 
 </body>
 
